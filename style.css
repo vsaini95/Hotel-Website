@@ -1,0 +1,614 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.hbody {
+  height: 100%;
+  width: 100%;
+}
+nav {
+  background: rgba(0, 0, 0, 0.9);
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,
+a:hover {
+  background: white;
+  color: black;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    overflow: hidden;
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    font-family: poppins;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: rgb(48, 28, 28);
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+.textover {
+  position: relative;
+}
+.textover figcaption {
+  position: absolute;
+  top: 13%;
+  left: 57%;
+  margin-right: 2%;
+}
+.textover figcaption h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #fff;
+  line-height: 90%;
+  overflow: hidden;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px rgb(39, 35, 35);
+  font-family: "Fredoka One", cursive;
+  border-bottom: 2px solid white;
+  padding-bottom: 1%;
+}
+.textover .hdiscp{
+  background-image: url(https://cdn0.weddingwire.in/emp/fotos/9/0/4/1/r10_2x_wedding-lawns-farmhouses-bardiha-lakeview-resort-event-space-4_15_319041-159317753776001.jpg);
+  background-size: cover;
+  background-position: center;
+  top:75%;
+  left:15%;
+  color:white;
+  text-shadow: 2px 2px rgb(27, 26, 26);
+  padding:5%;
+  width:70vw;
+  text-align:center;
+  border: 10px solid white;
+  transition:transform 0.4s;
+}
+.textover .hdiscp:hover{
+  transform: scale(1.1);
+}
+.textover p {
+  text-align: start;
+  margin-top: 3%;
+  color: #fff;
+  padding-right: 3%;
+}
+.text p{
+  position: absolute;
+  top:60%;
+  left:10%;
+  color:white;
+  text-align: center;
+}
+footer {
+  padding: 2% 10%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+@media screen and (max-width: 800px) {
+  .textover figcaption {
+    top: 13%;
+    left: 8%;
+  }
+  .textover h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width:378px){
+  .textover .hdiscp{
+    top:60%;
+  }
+}
+/*----gallery Css--*/
+.gbody {
+  background-image: url(https://pdbmedia.s3.ap-southeast-2.amazonaws.com/2017/01/Caesar-Augustus-Hotel-Italy.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.gal-body {
+  height:auto;
+  width: auto;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3% 5%;
+  overflow: hidden;
+}
+.gallery img {
+  min-width: 300px;
+  height: 350px;
+  margin: 2%;
+  flex: 1;
+  border-radius: 7%;
+  filter: grayscale(15);
+  transition: transform 0.3s;
+  padding: 10px;
+}
+.gallery img:hover {
+  filter: none;
+  padding: 0%;
+  border-radius: 0%;
+  transform: scale(0.9);
+  border: 15px solid #fff;
+  box-shadow: 1px 1px 10px 7px rgb(14, 12, 12);
+}
+.ghead {
+  margin: 3%;
+  padding-bottom: 1%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 145%;
+  border-bottom: 3px solid black;
+}
+@media screen and (max-width: 375px) {
+  .gallery {
+    width: 300px;
+    margin: 17px 33px 5px;
+  }
+  .gallery img {
+    height: 200px;
+    transition: transform 0.3s;
+    border-radius: 32px;
+  }
+  .gallery img:hover {
+    filter: none;
+    transform: scale(0.9);
+    border: 7px solid #fff;
+    border-radius: 0%;
+    box-shadow: 0.5px 0.5px 5px 2px rgb(14, 12, 12);
+  }
+}
+/*-----login page CSS-----*/
+.lbody {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(https://www.fodors.com/wp-content/uploads/2017/10/mnt2.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.c-wrap {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.lcard {
+  width: 23%;
+  background-color: rgba(255, 255, 255, 01);
+  border-radius: 2%;
+  text-align: center;
+  padding: 1%;
+  box-shadow: 2px 2px 20px 6px rgb(29, 28, 28);
+  margin-right: 17%;
+}
+.lcard form {
+  height: 100%;
+  width: 100%;
+}
+.lcard h2 {
+  margin: 5% 8%;
+  padding: 2.3%;
+  box-shadow: 0 0 15px 0px rgb(214, 68, 11);
+  border-radius: 3%;
+  text-align: center;
+  color: rgb(214, 68, 11);
+}
+.lcard form label {
+  color: rgb(51, 30, 4) e;
+}
+.lcard form button {
+  color: white;
+  background-color: rgb(188, 188, 192);
+  text-align: center;
+  padding: 2% 6%;
+  margin-left: 2.2%;
+  outline: none;
+  border-radius: 4%;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px 1px rgb(185, 182, 182);
+  background-color: rgb(214, 68, 11);
+}
+.lcard form button:active {
+  box-shadow: 0 0 1px 2px rgb(230, 225, 216);
+}
+.lcard input {
+  width: 80%;
+  height: 2.5em;
+  margin-bottom: 5%;
+  border: none;
+  border-radius: 3%;
+  box-shadow: 2px 2px 1px rgb(46, 38, 27);
+  background-color: rgb(248, 221, 221);
+}
+.lcard label {
+  margin-top: 20%;
+  margin-bottom: 5%;
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgb(66, 35, 4);
+}
+@media screen and (max-width: 1000px) {
+  .lcard {
+    width: 36vw;
+    margin-left: 13%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .lcard {
+    width: 80%;
+    
+    margin-right: 34px;
+  }
+}
+/*------Registration form----*/
+.rbody {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(https://wallpaperaccess.com/full/1143632.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.frap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rform {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  min-width: 340px;
+  width: 23%;
+  height: 60%;
+  border-radius: 4%;
+  padding: 3%;
+  overflow: hidden;
+}
+.rform form {
+  height: 110%;
+}
+.rform h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 10%;
+  font-family: poppins;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #dd6d0b;
+  padding: 3px;
+}
+.rform input {
+  background: transparent;
+  color: #fff;
+  border-bottom: 3px solid #dd6d0b;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+  height: 2.5em;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+.rform input:focus {
+  outline: none;
+}
+::placeholder {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rform button {
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2% 2%;
+  background-color: #dd6d0b;
+  font-family: poppins;
+  text-align: center;
+  color: #fff;
+  margin-left: 25%;
+}
+@media screen and (width: 380px) {
+  .rform form {
+    width: 85%;
+    margin-left: 5%;
+    margin-top: 3%;
+  }
+  .rform {
+    height: 60vh;
+  }
+}
+/**-----About page----*/
+.abody {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(https://i.pinimg.com/originals/55/5c/45/555c45abcbf069d7ae46bd8f01f6963a.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.discp {
+  background-color: transparent;
+  width: 50%;
+  margin: 5% auto 0;
+  text-align: center;
+  box-shadow: 3px 3px 15px 7px rgb(19, 17, 17);
+  
+}
+.discp h1 {
+  margin-top: 2.5%;
+  font-family: "Fredoka One", cursive;
+  font-size: 3em;
+  border-bottom: 3px solid black;
+}
+.discp p {
+  margin: 2%;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.Ainfo p {
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: "Fredoka One", cursive;
+  border-top: 2px solid black;
+}
+fab .fa-facebook-square,
+.fa-twitter,
+.fa-instagram,
+.fa-youtube {
+  margin: 0% 1%;
+}
+@media screen and (max-width: 1120px) {
+  .discp p {
+    font-weight: 300;
+    letter-spacing: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .discp {
+    width: 85vw;
+  }
+}
+/*-----Contact form CSS--*/
+.cbody {
+  background-image: url(https://wallpaperaccess.com/full/2489630.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.cf-wrap {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.cform {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  width: 22%;
+  height: 80%;
+  border-radius: 4%;
+  padding: 3%;
+  box-shadow: 1px 1px 2px 2px rgb(19, 17, 17);
+  min-width: 300px;
+  margin-left: 10%;
+}
+.cform form {
+  height: 100%;
+  width: 100%;
+}
+.cform h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 10%;
+  font-family: poppins;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #1c0dee;
+  padding: 2%;
+}
+.cform input {
+  background: transparent;
+  color: #fff;
+  border-bottom: 3px solid #1c0dee;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+  height: 2em;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.cform input,
+textarea:focus {
+  outline: none;
+}
+::placeholder {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cform button {
+  border-radius: 5%;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 2% 9%;
+  background-color: #1c0dee;
+  font-family: poppins;
+  text-align: center;
+  color: #fff;
+  margin-left: 18%;
+  box-shadow: 1px 1px 1px 1px rgb(17, 17, 17);;
+}
+.cform textarea {
+  margin-top: 4%;
+  border-radius: 3%;
+}
+.cform btn:active {
+  transform: translateY(-7px);
+}
+@media screen and (max-width: 420px) {
+  .cform {
+    width: 280px;
+  }
+  .cform form {
+    width: 85%;
+    margin-left: 10%;
+  }
+}
+/*------Services page CSS-----*/
+.sbody {
+  background-size: cover;
+  background-image: url(https://hotelska.com/wp-content/uploads/2020/03/Hotel-Grace-Santorini-is-this-the-world39s-most-beautiful-pool.jpg);
+  background-position: center;
+  height: 100%;
+}
+.scontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  min-width: 300px;
+  margin-top: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.sbox {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2%;
+  margin: 1.1%;
+  border-radius: 1%;
+  box-shadow: 0px 0px 1px 1px #fff;
+  display: flex;
+}
+.sbox img {
+  margin-right: 1%;
+  width: 100%;
+  box-shadow: 1px 1px 3px 4px #fff;
+  min-width: 250px;
+  min-height: 180px;
+}
+.sbox p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.sbox p span {
+  font-family: "Fredoka One", cursive;
+  font-weight: 900;
+  font-size: 1.5em;
+  color: rgb(3, 80, 76);
+}
+.scontainer h1 {
+  font-family: "Fredoka One", cursive;
+  font-size: 3em;
+  border-bottom: 3px solid black;
+}
+@media screen and (max-width: 1000px) {
+  .sbox {
+    flex-direction: column;
+  }
+  .sbox img {
+    width: 70%;
+    margin-left: 12px;
+  }
+  .sbox p {
+    text-align: center;
+  }
+}
